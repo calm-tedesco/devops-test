@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  status-state-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: status-state-api
+    ports:
+      - 8080:8080
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+  status-state-controller:
+    depends_on:
+      - status-state-api
+    build:
+      context: ./status-state-controller
+    container_name: status-state-controller
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
