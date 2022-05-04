@@ -1,14 +1,14 @@
 
 - install necessary packages:
-  apt install docker.io python3 python3-pip
+    apt install docker.io python3 python3-pip
 
 (depending on the system it might necessary to tweak the firewall settings or download the proper version of docker-compose and docker)
 
 - clone git repository:
-  git clone https://github.com/calm-tedesco/devops-test
+    git clone https://github.com/calm-tedesco/devops-test
 
 - run docker-compose:
-  sudo docker-compose up -d
+    sudo docker-compose up -d
 
 Done! It should be up and running already.
 
