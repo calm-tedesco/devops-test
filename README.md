@@ -1,14 +1,14 @@
 
 - install necessary packages:
-apt install docker.io python3 python3-pip
+  apt install docker.io python3 python3-pip
 
 (depending on the system it might necessary to tweak the firewall settings or download the proper version of docker-compose and docker)
 
 - clone git repository:
-git clone https://github.com/calm-tedesco/devops-test
+  git clone https://github.com/calm-tedesco/devops-test
 
 - run docker-compose:
-sudo docker-compose up -d
+  sudo docker-compose up -d
 
 Done! It should be up and running already.
 
@@ -18,10 +18,11 @@ http://status-state-api:8080/docker-ps from status_state_controller
 
 We can execute the following commands to see that the setup works:
 
+```
 curl -v http://localhost:8080/docker-ps
 docker exec -it status-state-controller bash
 python ./status_state_controller.py
-
+```
 
 things to add with more time:
 - kubernetes deployment, docker-compose does the job locally but can be translated into a kubernetes configuration
