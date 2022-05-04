@@ -29,8 +29,7 @@ We can execute the following commands to see that the setup works:
 
 ```
 curl -v http://localhost:8080/docker-ps
-docker exec -it status-state-controller bash
-python ./status_state_controller.py
+docker logs -f status-state-controller
 ```
 
 things to add with more time:
